@@ -19,6 +19,9 @@
 		6A79B129195F4FFC006546FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A79B111195F4FFC006546FB /* UIKit.framework */; };
 		6A79B131195F4FFC006546FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6A79B12F195F4FFC006546FB /* InfoPlist.strings */; };
 		6A79B133195F4FFC006546FB /* Movies_ShowsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A79B132195F4FFC006546FB /* Movies_ShowsTests.m */; };
+		6A79B140195F5021006546FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A79B13F195F5021006546FB /* Main.storyboard */; };
+		6A79B143195F5098006546FB /* MSMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A79B142195F5098006546FB /* MSMainTableViewController.m */; };
+		6A79B145195F51B1006546FB /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6A79B144195F51B1006546FB /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,10 @@
 		6A79B12E195F4FFC006546FB /* Movies&ShowsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Movies&ShowsTests-Info.plist"; sourceTree = "<group>"; };
 		6A79B130195F4FFC006546FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6A79B132195F4FFC006546FB /* Movies_ShowsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Movies_ShowsTests.m; sourceTree = "<group>"; };
+		6A79B13F195F5021006546FB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		6A79B141195F5098006546FB /* MSMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSMainTableViewController.h; sourceTree = "<group>"; };
+		6A79B142195F5098006546FB /* MSMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSMainTableViewController.m; sourceTree = "<group>"; };
+		6A79B144195F51B1006546FB /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +84,7 @@
 		6A79B101195F4FFC006546FB = {
 			isa = PBXGroup;
 			children = (
+				6A79B144195F51B1006546FB /* Podfile */,
 				6A79B113195F4FFC006546FB /* Movies&Shows */,
 				6A79B12C195F4FFC006546FB /* Movies&ShowsTests */,
 				6A79B10C195F4FFC006546FB /* Frameworks */,
@@ -109,7 +117,9 @@
 			children = (
 				6A79B11C195F4FFC006546FB /* MSAppDelegate.h */,
 				6A79B11D195F4FFC006546FB /* MSAppDelegate.m */,
-				6A79B11F195F4FFC006546FB /* Images.xcassets */,
+				6A79B13C195F5005006546FB /* Model */,
+				6A79B13D195F5009006546FB /* View */,
+				6A79B13E195F500D006546FB /* Controller */,
 				6A79B114195F4FFC006546FB /* Supporting Files */,
 			);
 			path = "Movies&Shows";
@@ -118,6 +128,7 @@
 		6A79B114195F4FFC006546FB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6A79B11F195F4FFC006546FB /* Images.xcassets */,
 				6A79B115195F4FFC006546FB /* Movies&Shows-Info.plist */,
 				6A79B116195F4FFC006546FB /* InfoPlist.strings */,
 				6A79B119195F4FFC006546FB /* main.m */,
@@ -142,6 +153,30 @@
 				6A79B12F195F4FFC006546FB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6A79B13C195F5005006546FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6A79B13D195F5009006546FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6A79B13F195F5021006546FB /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		6A79B13E195F500D006546FB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6A79B141195F5098006546FB /* MSMainTableViewController.h */,
+				6A79B142195F5098006546FB /* MSMainTableViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,7 +255,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A79B140195F5021006546FB /* Main.storyboard in Resources */,
 				6A79B118195F4FFC006546FB /* InfoPlist.strings in Resources */,
+				6A79B145195F51B1006546FB /* Podfile in Resources */,
 				6A79B120195F4FFC006546FB /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +279,7 @@
 			files = (
 				6A79B11E195F4FFC006546FB /* MSAppDelegate.m in Sources */,
 				6A79B11A195F4FFC006546FB /* main.m in Sources */,
+				6A79B143195F5098006546FB /* MSMainTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
