@@ -7,7 +7,10 @@
 //
 
 #import "MSMovie.h"
-
+#import "MSCellDrawerProtocol.h"
+#import "MSMovieCellDrawer.h"
 @implementation MSMovie
-
+-(id<MSCellDrawerProtocol>)cellDrawer{
+    return [[MSMovieCellDrawer alloc]init];
+}
 @end

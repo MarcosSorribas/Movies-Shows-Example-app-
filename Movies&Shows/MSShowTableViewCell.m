@@ -11,9 +11,7 @@
 @interface MSShowTableViewCell (){
 
 }
-@property (weak, nonatomic) IBOutlet UILabel *myTitleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *myDescriptionLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *myImageBackground;
+
 
 @end
 

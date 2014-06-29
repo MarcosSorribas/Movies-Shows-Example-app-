@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MSMediaItemProtocol.h"
 
-@interface MSMovie : NSObject
+@interface MSMovie : NSObject<MSMediaItemProtocol>
+
+@property (copy,nonatomic,readwrite) NSString *movieTitle;
+@property (copy,nonatomic,readwrite) NSString *movieDescription;
+@property (copy,nonatomic,readwrite) NSString *movieImageUrl;
 
 @end

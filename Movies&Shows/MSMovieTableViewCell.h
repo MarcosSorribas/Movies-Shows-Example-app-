@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MSMovieTableViewCell : UITableViewCell
-
+@property (weak, nonatomic) IBOutlet UIImageView *myImageThumbail;
+@property (weak, nonatomic) IBOutlet UILabel *myTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *myDescriptionLabel;
 @end

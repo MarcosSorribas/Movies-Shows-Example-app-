@@ -7,6 +7,7 @@
 //
 
 #import "MSMainTableViewController.h"
+#import "MSMediaItemProtocol.h"
 
 @interface MSMainTableViewController ()
 
@@ -54,16 +55,18 @@
     return [self.myMoviesAndShows count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    id<MSMediaItemProtocol> item = [self.myMoviesAndShows objectAtIndex:indexPath.row];
     
-    // Configure the cell...
+    UITableViewCell *cell = [item.cellDrawer cellForTableView:tableView atIndexPath:indexPath];
+    
+    [item.cellDrawer drawCell:cell withItem:item];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

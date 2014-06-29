@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface MSShow : NSObject
-
+@property (copy,nonatomic,readwrite) NSString *showTitle;
+@property (copy,nonatomic,readwrite) NSString *showDescription;
+@property (copy,nonatomic,readwrite) NSString *showImageUrl;
 @end
