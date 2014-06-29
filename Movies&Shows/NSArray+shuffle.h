@@ -1,5 +1,5 @@
 //
-//  MSMediaInteractor.h
+//  NSArray+shuffle.h
 //  Movies&Shows
 //
 //  Created by Marcos Sorribas Lopez on 29/06/14.
@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MSMediaInteractor : NSObject
-- (void)mediaItemsWithCompletion:(void(^)(NSArray *mediaItems))completion;
+@interface NSArray (shuffle)
+-(NSArray *) shuffledArray;
 @end

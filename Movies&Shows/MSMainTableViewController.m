@@ -8,11 +8,12 @@
 
 #import "MSMainTableViewController.h"
 #import "MSMediaItemProtocol.h"
+#import "MSMediaInteractor.h"
 
 @interface MSMainTableViewController ()
 
-@property (copy,nonatomic,readwrite) NSMutableArray *myMoviesAndShows;
-
+@property (strong,nonatomic,readwrite) NSArray *myMoviesAndShows;
+@property (strong,nonatomic,readwrite) MSMediaInteractor *mediaInteractor;
 @end
 
 @implementation MSMainTableViewController
@@ -21,7 +22,7 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+        _mediaInteractor = [[MSMediaInteractor alloc]init];
     }
     return self;
 }
@@ -29,12 +30,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self loadData];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+-(void)loadData{
+    [self.mediaInteractor mediaItemsWithCompletion:^(NSArray *mediaItems) {
+        self.myMoviesAndShows = mediaItems;
+        [self.tableView reloadData];
+    }];
 }
 
 - (void)didReceiveMemoryWarning

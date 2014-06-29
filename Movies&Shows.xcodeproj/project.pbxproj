@@ -33,6 +33,7 @@
 		6A79B16C19607E9D006546FB /* MSShowsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A79B16B19607E9D006546FB /* MSShowsProvider.m */; };
 		6A79B16F19607EAF006546FB /* MSMoviesProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A79B16E19607EAF006546FB /* MSMoviesProvider.m */; };
 		6A79B17219607EBC006546FB /* MSMediaInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A79B17119607EBC006546FB /* MSMediaInteractor.m */; };
+		6A79B17519608EBC006546FB /* NSArray+shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A79B17419608EBC006546FB /* NSArray+shuffle.m */; };
 		F5608A2D79DE4DAC9D00BCC3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18F80A345A940328924865C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +93,8 @@
 		6A79B16E19607EAF006546FB /* MSMoviesProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSMoviesProvider.m; sourceTree = "<group>"; };
 		6A79B17019607EBC006546FB /* MSMediaInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSMediaInteractor.h; sourceTree = "<group>"; };
 		6A79B17119607EBC006546FB /* MSMediaInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSMediaInteractor.m; sourceTree = "<group>"; };
+		6A79B17319608EBC006546FB /* NSArray+shuffle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+shuffle.h"; sourceTree = "<group>"; };
+		6A79B17419608EBC006546FB /* NSArray+shuffle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+shuffle.m"; sourceTree = "<group>"; };
 		A18F80A345A940328924865C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -158,6 +161,8 @@
 			children = (
 				6A79B11C195F4FFC006546FB /* MSAppDelegate.h */,
 				6A79B11D195F4FFC006546FB /* MSAppDelegate.m */,
+				6A79B17619608EC5006546FB /* Categories */,
+				6A79B16019607476006546FB /* Protocols */,
 				6A79B16119607E10006546FB /* Services */,
 				6A79B13C195F5005006546FB /* Model */,
 				6A79B13D195F5009006546FB /* View */,
@@ -221,7 +226,6 @@
 				6A79B141195F5098006546FB /* MSMainTableViewController.h */,
 				6A79B142195F5098006546FB /* MSMainTableViewController.m */,
 				6A79B15E1960737E006546FB /* Cell Drawers */,
-				6A79B16019607476006546FB /* Protocols */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -306,6 +310,15 @@
 				6A79B16E19607EAF006546FB /* MSMoviesProvider.m */,
 			);
 			name = Providers;
+			sourceTree = "<group>";
+		};
+		6A79B17619608EC5006546FB /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				6A79B17319608EBC006546FB /* NSArray+shuffle.h */,
+				6A79B17419608EBC006546FB /* NSArray+shuffle.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -445,6 +458,7 @@
 				6A79B17219607EBC006546FB /* MSMediaInteractor.m in Sources */,
 				6A79B11E195F4FFC006546FB /* MSAppDelegate.m in Sources */,
 				6A79B11A195F4FFC006546FB /* main.m in Sources */,
+				6A79B17519608EBC006546FB /* NSArray+shuffle.m in Sources */,
 				6A79B16F19607EAF006546FB /* MSMoviesProvider.m in Sources */,
 				6A79B16C19607E9D006546FB /* MSShowsProvider.m in Sources */,
 				6A79B15A1960736C006546FB /* MSMovieCellDrawer.m in Sources */,
