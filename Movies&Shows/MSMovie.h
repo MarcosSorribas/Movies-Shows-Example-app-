@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "MSMediaItemProtocol.h"
+#import <Mantle/Mantle.h>
 
-@interface MSMovie : NSObject<MSMediaItemProtocol>
+@interface MSMovie : NSObject<MTLJSONSerializing,MSMediaItemProtocol>
 
 @property (copy,nonatomic,readwrite) NSString *movieTitle;
 @property (copy,nonatomic,readwrite) NSString *movieDescription;

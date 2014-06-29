@@ -28,6 +28,11 @@
 		6A79B153195F542A006546FB /* MSShowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A79B152195F542A006546FB /* MSShowTableViewCell.m */; };
 		6A79B15A1960736C006546FB /* MSMovieCellDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A79B1591960736C006546FB /* MSMovieCellDrawer.m */; };
 		6A79B15D1960737A006546FB /* MSShowCellDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A79B15C1960737A006546FB /* MSShowCellDrawer.m */; };
+		6A79B16419607E2E006546FB /* MSRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A79B16319607E2E006546FB /* MSRequestManager.m */; };
+		6A79B16719607E7C006546FB /* MSBaseProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A79B16619607E7C006546FB /* MSBaseProvider.m */; };
+		6A79B16C19607E9D006546FB /* MSShowsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A79B16B19607E9D006546FB /* MSShowsProvider.m */; };
+		6A79B16F19607EAF006546FB /* MSMoviesProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A79B16E19607EAF006546FB /* MSMoviesProvider.m */; };
+		6A79B17219607EBC006546FB /* MSMediaInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A79B17119607EBC006546FB /* MSMediaInteractor.m */; };
 		F5608A2D79DE4DAC9D00BCC3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18F80A345A940328924865C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +82,16 @@
 		6A79B15B1960737A006546FB /* MSShowCellDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSShowCellDrawer.h; sourceTree = "<group>"; };
 		6A79B15C1960737A006546FB /* MSShowCellDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSShowCellDrawer.m; sourceTree = "<group>"; };
 		6A79B15F196073A2006546FB /* MSCellDrawerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSCellDrawerProtocol.h; sourceTree = "<group>"; };
+		6A79B16219607E2E006546FB /* MSRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRequestManager.h; sourceTree = "<group>"; };
+		6A79B16319607E2E006546FB /* MSRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSRequestManager.m; sourceTree = "<group>"; };
+		6A79B16519607E7C006546FB /* MSBaseProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSBaseProvider.h; sourceTree = "<group>"; };
+		6A79B16619607E7C006546FB /* MSBaseProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSBaseProvider.m; sourceTree = "<group>"; };
+		6A79B16A19607E9D006546FB /* MSShowsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSShowsProvider.h; sourceTree = "<group>"; };
+		6A79B16B19607E9D006546FB /* MSShowsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSShowsProvider.m; sourceTree = "<group>"; };
+		6A79B16D19607EAF006546FB /* MSMoviesProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSMoviesProvider.h; sourceTree = "<group>"; };
+		6A79B16E19607EAF006546FB /* MSMoviesProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSMoviesProvider.m; sourceTree = "<group>"; };
+		6A79B17019607EBC006546FB /* MSMediaInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSMediaInteractor.h; sourceTree = "<group>"; };
+		6A79B17119607EBC006546FB /* MSMediaInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSMediaInteractor.m; sourceTree = "<group>"; };
 		A18F80A345A940328924865C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -143,6 +158,7 @@
 			children = (
 				6A79B11C195F4FFC006546FB /* MSAppDelegate.h */,
 				6A79B11D195F4FFC006546FB /* MSAppDelegate.m */,
+				6A79B16119607E10006546FB /* Services */,
 				6A79B13C195F5005006546FB /* Model */,
 				6A79B13D195F5009006546FB /* View */,
 				6A79B13E195F500D006546FB /* Controller */,
@@ -213,10 +229,10 @@
 		6A79B14D195F53BD006546FB /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				6A79B147195F5385006546FB /* MSMovie.m */,
 				6A79B146195F5385006546FB /* MSMovie.h */,
-				6A79B14A195F538F006546FB /* MSShow.m */,
+				6A79B147195F5385006546FB /* MSMovie.m */,
 				6A79B149195F538F006546FB /* MSShow.h */,
+				6A79B14A195F538F006546FB /* MSShow.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -257,6 +273,39 @@
 				6A79B15F196073A2006546FB /* MSCellDrawerProtocol.h */,
 			);
 			name = Protocols;
+			sourceTree = "<group>";
+		};
+		6A79B16119607E10006546FB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6A79B16219607E2E006546FB /* MSRequestManager.h */,
+				6A79B16319607E2E006546FB /* MSRequestManager.m */,
+				6A79B16519607E7C006546FB /* MSBaseProvider.h */,
+				6A79B16619607E7C006546FB /* MSBaseProvider.m */,
+				6A79B16819607E81006546FB /* Interactors */,
+				6A79B16919607E8A006546FB /* Providers */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		6A79B16819607E81006546FB /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				6A79B17019607EBC006546FB /* MSMediaInteractor.h */,
+				6A79B17119607EBC006546FB /* MSMediaInteractor.m */,
+			);
+			name = Interactors;
+			sourceTree = "<group>";
+		};
+		6A79B16919607E8A006546FB /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				6A79B16A19607E9D006546FB /* MSShowsProvider.h */,
+				6A79B16B19607E9D006546FB /* MSShowsProvider.m */,
+				6A79B16D19607EAF006546FB /* MSMoviesProvider.h */,
+				6A79B16E19607EAF006546FB /* MSMoviesProvider.m */,
+			);
+			name = Providers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,10 +442,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A79B148195F5385006546FB /* MSMovie.m in Sources */,
+				6A79B17219607EBC006546FB /* MSMediaInteractor.m in Sources */,
 				6A79B11E195F4FFC006546FB /* MSAppDelegate.m in Sources */,
 				6A79B11A195F4FFC006546FB /* main.m in Sources */,
+				6A79B16F19607EAF006546FB /* MSMoviesProvider.m in Sources */,
+				6A79B16C19607E9D006546FB /* MSShowsProvider.m in Sources */,
 				6A79B15A1960736C006546FB /* MSMovieCellDrawer.m in Sources */,
+				6A79B16719607E7C006546FB /* MSBaseProvider.m in Sources */,
 				6A79B143195F5098006546FB /* MSMainTableViewController.m in Sources */,
+				6A79B16419607E2E006546FB /* MSRequestManager.m in Sources */,
 				6A79B150195F5412006546FB /* MSMovieTableViewCell.m in Sources */,
 				6A79B15D1960737A006546FB /* MSShowCellDrawer.m in Sources */,
 				6A79B14B195F538F006546FB /* MSShow.m in Sources */,
