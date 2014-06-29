@@ -15,7 +15,6 @@
 #pragma mark - JSON defines
 
 #define JSON_TITLE @"title"
-#define JSON_DESCRIPTION @"overview"
 #define JSON_IMAGE @"images.banner"
 
 
@@ -27,7 +26,6 @@
 +(NSDictionary*)JSONKeyPathsByPropertyKey{
     return @{
              @"showTitle":JSON_TITLE,
-             @"showDescription":JSON_DESCRIPTION,
              @"showImageUrl":JSON_IMAGE
              };
 }

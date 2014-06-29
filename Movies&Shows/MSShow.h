@@ -11,8 +11,7 @@
 #import <Mantle/Mantle.h>
 
 
-@interface MSShow : NSObject<MTLJSONSerializing,MSMediaItemProtocol>
+@interface MSShow : MTLModel<MTLJSONSerializing,MSMediaItemProtocol>
 @property (copy,nonatomic,readwrite) NSString *showTitle;
-@property (copy,nonatomic,readwrite) NSString *showDescription;
 @property (copy,nonatomic,readwrite) NSString *showImageUrl;
 @end

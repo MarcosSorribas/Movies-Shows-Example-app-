@@ -15,7 +15,6 @@
 
 -(void)drawCell:(MSShowTableViewCell *)cell withItem:(MSShow*)item{
     cell.myTitleLabel.text = item.showTitle;
-    cell.myDescriptionLabel.text = item.showDescription;
     [cell.myImageBackground setImageWithURL:[NSURL URLWithString:item.showImageUrl] placeholderImage:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
     }];
 }
