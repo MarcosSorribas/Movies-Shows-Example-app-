@@ -7,11 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MSMediaItemProtocol.h"
 #import <Mantle/Mantle.h>
 
 
-@interface MSShow : MTLModel<MTLJSONSerializing,MSMediaItemProtocol>
+@interface MSShow : MTLModel<MTLJSONSerializing>
 @property (copy,nonatomic,readwrite) NSString *showTitle;
 @property (copy,nonatomic,readwrite) NSString *showImageUrl;
 @end

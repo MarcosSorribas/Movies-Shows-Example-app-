@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A2E261F196973EC00ECB0E4 /* MSMovie+MediaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2E261E196973EC00ECB0E4 /* MSMovie+MediaItem.m */; };
+		6A2E26221969744900ECB0E4 /* MSShow+MediaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2E26211969744900ECB0E4 /* MSShow+MediaItem.m */; };
 		6A79B10E195F4FFC006546FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A79B10D195F4FFC006546FB /* Foundation.framework */; };
 		6A79B110195F4FFC006546FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A79B10F195F4FFC006546FB /* CoreGraphics.framework */; };
 		6A79B112195F4FFC006546FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A79B111195F4FFC006546FB /* UIKit.framework */; };
@@ -49,6 +51,10 @@
 
 /* Begin PBXFileReference section */
 		2E47212C1B834101AC4A5A12 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		6A2E261D196973EC00ECB0E4 /* MSMovie+MediaItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MSMovie+MediaItem.h"; sourceTree = "<group>"; };
+		6A2E261E196973EC00ECB0E4 /* MSMovie+MediaItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MSMovie+MediaItem.m"; sourceTree = "<group>"; };
+		6A2E26201969744900ECB0E4 /* MSShow+MediaItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MSShow+MediaItem.h"; sourceTree = "<group>"; };
+		6A2E26211969744900ECB0E4 /* MSShow+MediaItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MSShow+MediaItem.m"; sourceTree = "<group>"; };
 		6A79B10A195F4FFC006546FB /* Movies&Shows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movies&Shows.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A79B10D195F4FFC006546FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6A79B10F195F4FFC006546FB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -162,7 +168,6 @@
 				6A79B11C195F4FFC006546FB /* MSAppDelegate.h */,
 				6A79B11D195F4FFC006546FB /* MSAppDelegate.m */,
 				6A79B17619608EC5006546FB /* Categories */,
-				6A79B16019607476006546FB /* Protocols */,
 				6A79B16119607E10006546FB /* Services */,
 				6A79B13C195F5005006546FB /* Model */,
 				6A79B13D195F5009006546FB /* View */,
@@ -213,6 +218,7 @@
 		6A79B13D195F5009006546FB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6A79B16019607476006546FB /* Protocols */,
 				6A79B13F195F5021006546FB /* Main.storyboard */,
 				6A79B155195F55BF006546FB /* Movie */,
 				6A79B156195F55C7006546FB /* Show */,
@@ -233,8 +239,12 @@
 		6A79B14D195F53BD006546FB /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				6A2E261D196973EC00ECB0E4 /* MSMovie+MediaItem.h */,
+				6A2E261E196973EC00ECB0E4 /* MSMovie+MediaItem.m */,
 				6A79B146195F5385006546FB /* MSMovie.h */,
 				6A79B147195F5385006546FB /* MSMovie.m */,
+				6A2E26201969744900ECB0E4 /* MSShow+MediaItem.h */,
+				6A2E26211969744900ECB0E4 /* MSShow+MediaItem.m */,
 				6A79B149195F538F006546FB /* MSShow.h */,
 				6A79B14A195F538F006546FB /* MSShow.m */,
 			);
@@ -459,9 +469,11 @@
 				6A79B11E195F4FFC006546FB /* MSAppDelegate.m in Sources */,
 				6A79B11A195F4FFC006546FB /* main.m in Sources */,
 				6A79B17519608EBC006546FB /* NSArray+shuffle.m in Sources */,
+				6A2E26221969744900ECB0E4 /* MSShow+MediaItem.m in Sources */,
 				6A79B16F19607EAF006546FB /* MSMoviesProvider.m in Sources */,
 				6A79B16C19607E9D006546FB /* MSShowsProvider.m in Sources */,
 				6A79B15A1960736C006546FB /* MSMovieCellDrawer.m in Sources */,
+				6A2E261F196973EC00ECB0E4 /* MSMovie+MediaItem.m in Sources */,
 				6A79B16719607E7C006546FB /* MSBaseProvider.m in Sources */,
 				6A79B143195F5098006546FB /* MSMainTableViewController.m in Sources */,
 				6A79B16419607E2E006546FB /* MSRequestManager.m in Sources */,

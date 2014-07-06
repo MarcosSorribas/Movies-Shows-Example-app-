@@ -7,8 +7,6 @@
 //
 
 #import "MSShow.h"
-#import "MSShowCellDrawer.h"
-#import "MSCellDrawerProtocol.h"
 
 
 #pragma mark -
@@ -31,10 +29,5 @@
 }
 
 
-#pragma mark -
-#pragma mark - MSCellDrawerProtocol methods
 
--(id<MSCellDrawerProtocol>)cellDrawer{
-    return [[MSShowCellDrawer alloc]init];
-}
 @end

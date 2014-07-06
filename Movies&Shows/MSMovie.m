@@ -7,8 +7,6 @@
 //
 
 #import "MSMovie.h"
-#import "MSCellDrawerProtocol.h"
-#import "MSMovieCellDrawer.h"
 
 #pragma mark -
 #pragma mark - JSON defines
@@ -31,10 +29,5 @@
              };
 }
 
-#pragma mark -
-#pragma mark - MSCellDrawerProtocol methods
 
--(id<MSCellDrawerProtocol>)cellDrawer{
-    return [[MSMovieCellDrawer alloc]init];
-}
 @end
