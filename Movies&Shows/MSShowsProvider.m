@@ -9,12 +9,14 @@
 #import "MSShowsProvider.h"
 #import "MSShow.h"
 
-#define URL_PATH @"shows/trending.json/df2880909bafa2689135188bf47fe5f9"
+@interface MSShowsProvider ()
+@property (nonatomic,strong) NSString *privateKey;
+@end
 
 @implementation MSShowsProvider
 -(void)showsWithSuccessBlock:(RequestManagerSuccess)successBlock errorBlock:(RequestManagerError)errorBlock{
     
-    NSString *path = URL_PATH;
+    NSString *path = [self getURLPath];
     NSDictionary *parameters = @{};
     [self.requestManager GET:path parameters:parameters succesBlock:^(id data) {
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
@@ -30,5 +32,27 @@
     } errorBlock:^(NSError *error) {
         errorBlock(error);
     }];
+}
+
+
+#pragma mark -
+#pragma mark - Private Methods
+
+
+-(NSString*)getURLPath{
+    NSString *path = [NSString stringWithFormat:@"shows/trending.json/%@",self.privateKey];
+    return path;
+}
+
+#pragma mark -
+#pragma mark - Getters & Setters
+
+-(NSString*)privateKey{
+    if (_privateKey == nil) {
+        //Key pasada como argumento al programa.
+        NSArray * argumnetos = [[NSProcessInfo processInfo] arguments];
+        _privateKey = argumnetos[1];
+    }
+    return _privateKey;
 }
 @end

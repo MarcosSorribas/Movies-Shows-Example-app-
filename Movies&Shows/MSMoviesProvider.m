@@ -9,12 +9,14 @@
 #import "MSMoviesProvider.h"
 #import "MSMovie.h"
 
-#define URL_PATH @"movies/trending.json/df2880909bafa2689135188bf47fe5f9"
+@interface MSMoviesProvider ()
+@property (nonatomic,strong) NSString *privateKey;
+@end
 
 @implementation MSMoviesProvider
+
 -(void)moviesWithSuccessBlock:(RequestManagerSuccess)successBlock errorBlock:(RequestManagerError)errorBlock{
-    
-    NSString *path = URL_PATH;
+    NSString *path = [self getURLPath];
     NSDictionary *parameters = @{};
     
     [self.requestManager GET:path parameters:parameters succesBlock:^(id data) {
@@ -31,5 +33,26 @@
     } errorBlock:^(NSError *error) {
         errorBlock(error);
     }];
+}
+
+#pragma mark -
+#pragma mark - Private Methods
+
+
+-(NSString*)getURLPath{
+    NSString *path = [NSString stringWithFormat:@"movies/trending.json/%@",self.privateKey];
+    return path;
+}
+
+#pragma mark -
+#pragma mark - Getters & Setters
+
+-(NSString*)privateKey{
+    if (_privateKey == nil) {
+        //Key pasada como argumento al programa.
+        NSArray * argumnetos = [[NSProcessInfo processInfo] arguments];
+        _privateKey = argumnetos[1];
+    }
+    return _privateKey;
 }
 @end
