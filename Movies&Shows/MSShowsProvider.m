@@ -49,9 +49,11 @@
 
 -(NSString*)privateKey{
     if (_privateKey == nil) {
-        //Key pasada como argumento al programa.
-        NSArray * argumnetos = [[NSProcessInfo processInfo] arguments];
-        _privateKey = argumnetos[1];
+        if ([[[NSProcessInfo processInfo] arguments]count]>1) {
+            _privateKey = [[NSProcessInfo processInfo] arguments][1];
+        }else{
+            NSLog(@"¡NO has definido tu clave privada como argumento del programa. LEETE el README de GitHub! 😒");
+        }
     }
     return _privateKey;
 }
