@@ -11,17 +11,13 @@ La app esta pensada para recibir la clave privada como primer argumento al inici
 
 * Primero conseguir la clave privada que nos de acceso al API. Ir a [trakt.tv](http://trakt.tv/) registraros (es gratis) y en Settings>API. Copiarla al portapapeles. 
 2. Una vez que teneis vuestra API nos descargamos este proyecto de xcode y lo abrimos. `¡ANTES DE EJECUTAR NADA!` Pinchar sobre el Scheme actual > Edit Scheme  
-
-<img style="display: block;
-    margin-left: auto;
-    margin-right: auto" src="images/paso2.png" />
-
+<div align="center">
+<img src="images/paso2.png" />
+</div>
 * Y dentro de la nueva ventana que se ha abierto. Añadimos nuestra clave privada como primer argumento de la aplicacion.   
-
-<img style="display: block;
-    margin-left: auto;
-    margin-right: auto" src="images/paso3.png" />
-
+<div align="center">
+<img src="images/paso3.png" />
+</div>
 * `¡EJECUTAR!`
 
 
